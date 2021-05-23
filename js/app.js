@@ -1,7 +1,20 @@
 
 //Registro del service worker
+
+// El siguiente artefacto genera la autoadaptabilidad de la pagina 
+// En ambiente de desarrollo y en ambiente web
+
+//Captura de la url completa, por donde se llegó a la página
+var url = window.location.href;
+
+var swLocation = '/Factoria/sw.js';
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js');
+
+    if ( url.includes('localhost')) {
+        swLocation = '/sw.js';
+    }
+
+    navigator.serviceWorker.register(swLocation);
 }
 
 // Referencias de jQuery

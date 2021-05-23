@@ -10,7 +10,9 @@ const INMUTABLE_CACHE = 'inmutable-v1';
  */
 
 const APP_SHELL = [
-    '/',
+    //La siguiente linea se comenta para que tenga más compatibilidad con
+    //github
+    //'/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',
